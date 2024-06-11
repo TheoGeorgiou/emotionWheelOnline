@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Emotion Wheel</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<style type="text/css">
+
+html, body {
+	margin: 0; 
+	height: 100%; 
+	overflow: hidden
+	}
+
+#thing {
+    position: relative;
+    left: 50px;
+    top: 50px;
+    transition: left .5s ease-in, top .5s ease-in;
+}
+
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: black;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+#information{
+position:absolute;
+border: solid;
+width: 30%;
+height: 30%;
+   top: 5%;
+   right:10%;
+
+}
+
+</style>
+
+<body>
+
+<div id="wheel"> 
+<canvas id="canvaspiechart" width="700" height="700"></canvas>
+ <img id="thing" class="dot">
+ </div>
+ 
+ <div id="information"> 
+<h1> The EmotionWheel </h1>
+<div id="position">None Yet</div>
+  <div id="confidence">None Yet</div>
+  <div id="antiClockNeighbour">None Yet</div>
+  <div id="clockNeighbour">None Yet</div>
+   <input type="button" onclick="javascript: appendInfo()" value="Save Trial"/>
+   <input type="button" onclick="javascript: writeCSV()" value="Download file"/>
+    <p>&#169  2024 <a href="https://scholar.google.co.uk/citations?user=x3yRN0gAAAAJ" target="_blank">Dr Theo Georgiou </a> </p>
+</div>
+
+  <script type="text/javascript" src="wheelMaths3.js"></script>
+</body>
+</html>
